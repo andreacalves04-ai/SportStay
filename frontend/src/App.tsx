@@ -8,6 +8,7 @@ import Lessons from './pages/Lessons';
 import Rentals from './pages/Rentals';
 import WindForecast from './pages/WindForecast';
 import Profile from './pages/Profile';
+import HostProfile from './pages/HostProfile';
 
 // Layout Component
 const AppLayout = ({ children }: { children: React.ReactNode }) => {
@@ -105,6 +106,7 @@ function App() {
           <Route path="/rentals" element={<Rentals />} />
           <Route path="/wind" element={<WindForecast />} />
           <Route path="/profile" element={<Profile />} />
+          <Route path="/host/:id" element={<HostProfile />} />
         </Routes>
       </AppLayout>
     </BrowserRouter>
