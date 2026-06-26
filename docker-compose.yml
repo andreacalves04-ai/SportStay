@@ -1,0 +1,20 @@
+version: '3.8'
+
+services:
+  web:
+    image: nginx:alpine
+    volumes:
+      - ./dist:/usr/share/nginx/html:ro
+    networks:
+      - neria-gateway
+    labels:
+      - "traefik.enable=true"
+      - "traefik.docker.network=neria-gateway"
+      - "traefik.http.routers.sportstay.rule=Host(`sportstay.neriaintelligence.com.br`)"
+      - "traefik.http.routers.sportstay.entrypoints=websecure"
+      - "traefik.http.routers.sportstay.tls.certresolver=myresolver"
+      - "traefik.http.services.sportstay.loadbalancer.server.port=80"
+
+networks:
+  neria-gateway:
+    external: true

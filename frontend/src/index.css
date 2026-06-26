@@ -1,124 +1,151 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&display=swap');
+
 :root {
-  /* Cores Base */
-  --bg-primary: #0b0f19;
-  --bg-secondary: #111827;
-  --text-primary: #f3f4f6;
-  --text-secondary: #9ca3af;
+  /* Dark Mode Base */
+  --bg-dark: #0f172a;
+  --bg-darker: #020617;
   
-  /* Cores de Neon / Acentos */
-  --accent-cyan: #06b6d4;
-  --accent-cyan-glow: rgba(6, 182, 212, 0.3);
-  --accent-green: #10b981;
-  --accent-orange: #f97316;
+  /* Neon Accents */
+  --neon-cyan: #06b6d4;
+  --neon-cyan-glow: rgba(6, 182, 212, 0.4);
+  --neon-green: #10b981;
+  --neon-green-glow: rgba(16, 185, 129, 0.4);
 
   /* Glassmorphism */
-  --glass-bg: rgba(17, 24, 39, 0.4);
+  --glass-bg: rgba(255, 255, 255, 0.05);
   --glass-border: rgba(255, 255, 255, 0.1);
-  --glass-blur: 12px;
+  --glass-blur: blur(12px);
+  
+  /* Text */
+  --text-primary: #f8fafc;
+  --text-secondary: #94a3b8;
 }
 
 * {
-  box-sizing: border-box;
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
 }
 
 body {
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-  background-color: var(--bg-primary);
+  font-family: 'Outfit', sans-serif;
+  background: var(--bg-darker);
   color: var(--text-primary);
   min-height: 100vh;
-  -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
 }
 
-/* Utilitários Glassmorphism */
+/* Glassmorphism Utilities */
 .glass-panel {
   background: var(--glass-bg);
-  backdrop-filter: blur(var(--glass-blur));
-  -webkit-backdrop-filter: blur(var(--glass-blur));
+  backdrop-filter: var(--glass-blur);
+  -webkit-backdrop-filter: var(--glass-blur);
   border: 1px solid var(--glass-border);
   border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
 }
 
-.glass-card {
-  background: linear-gradient(145deg, rgba(31, 41, 55, 0.6) 0%, rgba(17, 24, 39, 0.6) 100%);
-  backdrop-filter: blur(var(--glass-blur));
-  -webkit-backdrop-filter: blur(var(--glass-blur));
-  border: 1px solid var(--glass-border);
-  border-radius: 12px;
+.text-gradient {
+  background: linear-gradient(90deg, var(--neon-cyan), var(--neon-green));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.btn-neon {
+  background: transparent;
+  color: var(--text-primary);
+  border: 1px solid var(--neon-cyan);
+  padding: 12px 24px;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: relative;
   overflow: hidden;
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
 }
 
-.glass-card:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 8px 24px var(--accent-cyan-glow);
-  border-color: var(--accent-cyan);
+.btn-neon:hover {
+  background: var(--neon-cyan);
+  box-shadow: 0 0 15px var(--neon-cyan-glow);
+  color: var(--bg-darker);
 }
 
-/* Botões */
-.btn-primary {
-  background-color: var(--accent-cyan);
-  color: #fff;
+.btn-neon-primary {
+  background: var(--neon-cyan);
+  color: var(--bg-darker);
+  box-shadow: 0 0 10px var(--neon-cyan-glow);
   border: none;
   padding: 12px 24px;
   border-radius: 8px;
   font-weight: 600;
   cursor: pointer;
-  transition: background-color 0.2s;
+  transition: all 0.3s ease;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
 }
 
-.btn-primary:hover {
-  background-color: #0891b2;
+.btn-neon-primary:hover {
+  box-shadow: 0 0 20px var(--neon-cyan-glow);
+  transform: translateY(-2px);
 }
 
-/* Layout App */
-.app-container {
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: var(--bg-darker);
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(255, 255, 255, 0.3);
+}
+
+/* Responsive Web/Desktop Layout */
+.desktop-only {
+  display: none !important;
+}
+
+.properties-list {
   display: flex;
   flex-direction: column;
-  min-height: 100vh;
-  padding-bottom: 80px; /* espaco pro tab bar mobile */
+  gap: 20px;
 }
 
-/* Header & Tab Bar genérico */
-.app-header {
-  padding: 20px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
+@media (min-width: 768px) {
+  .mobile-only {
+    display: none !important;
+  }
+  .desktop-only {
+    display: flex !important;
+  }
+  
+  main {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding-top: 100px !important;
+    padding-bottom: 60px !important; 
+  }
 
-.bottom-tab-bar {
-  position: fixed;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  height: 64px;
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  z-index: 100;
-  background: var(--glass-bg);
-  backdrop-filter: blur(var(--glass-blur));
-  border-top: 1px solid var(--glass-border);
-}
+  .properties-list, .lessons-list, .rentals-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 24px;
+    justify-content: flex-start;
+  }
 
-.tab-item {
-  color: var(--text-secondary);
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  font-size: 10px;
-  gap: 4px;
-  cursor: pointer;
-}
-
-.tab-item.active {
-  color: var(--accent-cyan);
-}
-
-/* Imagens */
-img {
-  max-width: 100%;
-  display: block;
+  .pro-hosts-list {
+    justify-content: flex-start;
+    gap: 32px;
+  }
 }

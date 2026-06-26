@@ -1,80 +1,138 @@
-import { ArrowLeft, CheckCircle } from 'lucide-react';
+import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
+import { ChevronLeft, Plus, Minus, Waves, Check } from 'lucide-react';
 
-export default function EquipmentRental() {
+const equipmentList = [
+  {
+    id: 'k1',
+    category: 'Kite',
+    brand: 'Duotone',
+    model: 'Kite Completo 2024 (12m)',
+    price: 250,
+    imageUrl: '/images/gear.png'
+  },
+  {
+    id: 'k2',
+    category: 'Kite',
+    brand: 'North',
+    model: 'Prancha Twintip Carbon',
+    price: 150,
+    imageUrl: '/images/gear.png'
+  },
+  {
+    id: 'b1',
+    category: 'Board',
+    brand: 'Duotone',
+    model: 'Prancha Direcional Surf',
+    price: 180,
+    imageUrl: '/images/gear.png'
+  }
+];
+
+const EquipmentRental = () => {
   const navigate = useNavigate();
+  const [selected, setSelected] = useState<Record<string, number>>({});
+
+  const handleSelect = (id: string, action: 'add' | 'remove') => {
+    setSelected(prev => {
+      const current = prev[id] || 0;
+      if (action === 'add') return { ...prev, [id]: current + 1 };
+      if (action === 'remove' && current > 0) return { ...prev, [id]: current - 1 };
+      return prev;
+    });
+  };
+
+  const total = equipmentList.reduce((acc, eq) => acc + (eq.price * (selected[eq.id] || 0)), 0);
 
   return (
-    <div style={{ paddingBottom: '100px' }}>
-      <header style={{ padding: '20px', display: 'flex', alignItems: 'center', gap: '16px' }}>
-        <button onClick={() => navigate(-1)} style={{ background: 'transparent', border: 'none', color: 'var(--text-primary)' }}>
-          <ArrowLeft size={24} />
-        </button>
-        <div>
-          <h1 style={{ fontSize: '18px', fontWeight: 'bold' }}>ADD-ON KITESURF EQUIPMENT</h1>
-          <div style={{ fontSize: '12px', color: 'var(--text-secondary)' }}>(Premium Rental)</div>
+    <div style={{ padding: '20px', paddingBottom: '120px' }}>
+      
+      {/* Header */}
+      <div style={{ display: 'flex', alignItems: 'center', gap: '16px', marginBottom: '30px' }}>
+        <div 
+          onClick={() => navigate(-1)}
+          className="glass-panel"
+          style={{ padding: '10px', borderRadius: '50%', cursor: 'pointer', display: 'flex', alignItems: 'center', justifyContent: 'center' }}
+        >
+          <ChevronLeft color="var(--text-primary)" size={24} />
         </div>
-      </header>
-
-      <div style={{ padding: '0 20px 20px 20px' }}>
-        <p style={{ fontSize: '14px', color: 'var(--text-secondary)', marginBottom: '24px', textAlign: 'center' }}>
-          Enhance Your Stay at <strong style={{ color: 'var(--accent-cyan)' }}>'THE REEF HOUSE'</strong> - Select premium Duotone & North gear to match your wind.
-        </p>
-
-        {/* Duotone Card */}
-        <div className="glass-card" style={{ padding: '16px', marginBottom: '20px', position: 'relative' }}>
-          <div style={{ position: 'absolute', top: 0, left: 0, width: '4px', height: '100%', background: 'var(--accent-cyan)' }}></div>
-          <h2 style={{ fontSize: '16px', marginBottom: '12px' }}>Duotone Kitesurfing</h2>
-          
-          <div style={{ background: 'rgba(255,255,255,0.05)', borderRadius: '8px', padding: '12px', marginBottom: '12px', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
-            <img src="https://m.media-amazon.com/images/I/61MvJzFj73L._AC_SL1500_.jpg" alt="Duotone" style={{ height: '120px', objectFit: 'contain', mixBlendMode: 'lighten' }} />
-          </div>
-
-          <h3 style={{ fontSize: '14px', fontWeight: 'bold', marginBottom: '4px' }}>DUOTONE KITE & BAR</h3>
-          <p style={{ fontSize: '12px', color: 'var(--text-secondary)', marginBottom: '8px' }}>
-            Duotone Rebel SLS Kite, Trust Bar S/M, Pump
-          </p>
-          <div style={{ fontSize: '10px', color: 'var(--accent-cyan)', fontWeight: 'bold', marginBottom: '12px' }}>
-            PERFORMANCE FREERIDE | Sizes: 8m, 10m, 12m
-          </div>
-          
-          <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
-            <div>
-              <span style={{ fontSize: '18px', fontWeight: 'bold' }}>€45</span>
-              <span style={{ fontSize: '12px', color: 'var(--text-secondary)' }}> /day</span>
-            </div>
-            <button className="btn-primary">Select Size & Add</button>
-          </div>
-        </div>
-
-        {/* North Card */}
-        <div className="glass-card" style={{ padding: '16px', marginBottom: '20px', position: 'relative' }}>
-          <h2 style={{ fontSize: '16px', marginBottom: '12px' }}>North Kiteboarding</h2>
-          
-          <div style={{ background: 'rgba(255,255,255,0.05)', borderRadius: '8px', padding: '12px', marginBottom: '12px', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
-            <div style={{ height: '120px', width: '100%', display: 'flex', alignItems: 'center', justifyContent: 'center', color: 'var(--accent-green)' }}>
-                <CheckCircle size={48} />
-            </div>
-          </div>
-
-          <h3 style={{ fontSize: '14px', fontWeight: 'bold', marginBottom: '4px' }}>NORTH KITE & BAR</h3>
-          <p style={{ fontSize: '12px', color: 'var(--text-secondary)', marginBottom: '8px' }}>
-            North Orbit 2024, Navigator Bar, Pump
-          </p>
-          <div style={{ fontSize: '10px', color: 'var(--accent-green)', fontWeight: 'bold', marginBottom: '12px' }}>
-            BIG AIR BOOST | Sizes: 9m, 11m, 13m
-          </div>
-          
-          <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
-            <div>
-              <span style={{ fontSize: '18px', fontWeight: 'bold' }}>€48</span>
-              <span style={{ fontSize: '12px', color: 'var(--text-secondary)' }}> /day</span>
-            </div>
-            <button className="btn-primary" style={{ background: 'var(--accent-green)' }}>Select Size & Add</button>
-          </div>
-        </div>
-
+        <h2 style={{ fontSize: '1.5rem', fontWeight: 700 }}>Aluguel de Quiver</h2>
       </div>
+
+      <div style={{ marginBottom: '24px' }}>
+        <p style={{ color: 'var(--text-secondary)' }}>
+          Adicione equipamentos de alta performance à sua reserva na The Reef House.
+        </p>
+      </div>
+
+      {/* Equipment List */}
+      <div style={{ display: 'flex', flexDirection: 'column', gap: '16px' }}>
+        {equipmentList.map(eq => (
+          <div key={eq.id} className="glass-panel" style={{ display: 'flex', overflow: 'hidden' }}>
+            <div style={{ 
+              width: '120px', 
+              backgroundImage: `url(${eq.imageUrl})`, 
+              backgroundSize: 'cover', 
+              backgroundPosition: 'center'
+            }}></div>
+            <div style={{ padding: '16px', flex: 1, display: 'flex', flexDirection: 'column', justifyContent: 'space-between' }}>
+              <div>
+                <span style={{ fontSize: '0.75rem', color: 'var(--neon-cyan)', fontWeight: 600, textTransform: 'uppercase' }}>
+                  {eq.category} • {eq.brand}
+                </span>
+                <h4 style={{ fontSize: '1rem', fontWeight: 600, marginTop: '4px' }}>{eq.model}</h4>
+              </div>
+              
+              <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-end', marginTop: '16px' }}>
+                <span style={{ fontWeight: 700 }}>R$ {eq.price}<span style={{ fontSize: '0.75rem', color: 'var(--text-secondary)', fontWeight: 400 }}>/dia</span></span>
+                
+                {/* Quantity Controls */}
+                <div style={{ display: 'flex', alignItems: 'center', gap: '12px' }}>
+                  <button 
+                    onClick={() => handleSelect(eq.id, 'remove')}
+                    style={{ background: 'var(--glass-bg)', border: '1px solid var(--glass-border)', borderRadius: '50%', width: '28px', height: '28px', display: 'flex', alignItems: 'center', justifyContent: 'center', color: 'var(--text-primary)', cursor: 'pointer' }}
+                  >
+                    <Minus size={16} />
+                  </button>
+                  <span style={{ fontWeight: 600, width: '12px', textAlign: 'center' }}>
+                    {selected[eq.id] || 0}
+                  </span>
+                  <button 
+                    onClick={() => handleSelect(eq.id, 'add')}
+                    style={{ background: 'var(--neon-cyan)', border: 'none', borderRadius: '50%', width: '28px', height: '28px', display: 'flex', alignItems: 'center', justifyContent: 'center', color: 'var(--bg-darker)', cursor: 'pointer' }}
+                  >
+                    <Plus size={16} />
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        ))}
+      </div>
+
+      {/* Floating Action */}
+      {total > 0 && (
+        <div style={{ 
+          position: 'fixed', bottom: '80px', left: '20px', right: '20px', zIndex: 100,
+          background: 'var(--neon-green)', color: 'var(--bg-darker)', borderRadius: '16px',
+          padding: '16px 24px', display: 'flex', justifyContent: 'space-between', alignItems: 'center',
+          boxShadow: '0 10px 25px var(--neon-green-glow)'
+        }}>
+          <div>
+            <p style={{ fontSize: '0.875rem', fontWeight: 600 }}>Total Adicional</p>
+            <h3 style={{ fontSize: '1.25rem', fontWeight: 800 }}>+ R$ {total} <span style={{ fontSize: '0.875rem', fontWeight: 400 }}>/dia</span></h3>
+          </div>
+          <button style={{ 
+            background: 'var(--bg-darker)', color: 'var(--neon-green)', border: 'none',
+            padding: '10px 20px', borderRadius: '8px', fontWeight: 700, display: 'flex', alignItems: 'center', gap: '8px'
+          }}>
+            <Check size={18} /> Confirmar
+          </button>
+        </div>
+      )}
+
     </div>
   );
-}
+};
+
+export default EquipmentRental;

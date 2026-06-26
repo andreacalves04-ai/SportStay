@@ -1,121 +1,172 @@
-import { ArrowLeft, Star, Users, ShieldCheck } from 'lucide-react';
-import { useNavigate } from 'react-router-dom';
+import React from 'react';
+import { useParams, useNavigate } from 'react-router-dom';
+import { ChevronLeft, Wind, MapPin, Star, ShieldCheck, Waves, Award, Video, Coffee, CheckCircle2 } from 'lucide-react';
 
-export default function PropertyDetails() {
+const PropertyDetails = () => {
+  const { id } = useParams();
   const navigate = useNavigate();
 
   return (
-    <div style={{ paddingBottom: '100px' }}>
+    <div style={{ paddingBottom: '120px' }}>
+      
       {/* Hero Image */}
       <div style={{ 
-        position: 'relative', 
-        height: '300px', 
-        background: 'url(https://images.unsplash.com/photo-1596773229713-39f15053ec38?q=80&w=1000&auto=format&fit=crop) center/cover' 
+        height: '40vh', 
+        minHeight: '300px',
+        maxHeight: '400px',
+        backgroundImage: 'url(/images/villa1.png)',
+        backgroundSize: 'cover',
+        backgroundPosition: 'center',
+        position: 'relative'
       }}>
-        <button 
+        <div style={{ position: 'absolute', top: 0, left: 0, right: 0, bottom: 0, background: 'linear-gradient(to bottom, rgba(0,0,0,0.5) 0%, transparent 50%, rgba(10,15,36,1) 100%)' }}></div>
+        
+        {/* Back Button */}
+        <div 
           onClick={() => navigate(-1)}
-          className="glass-panel" 
-          style={{ position: 'absolute', top: '20px', left: '20px', padding: '8px', color: '#fff', border: 'none', background: 'rgba(0,0,0,0.5)' }}>
-          <ArrowLeft size={24} />
-        </button>
-        <div className="glass-panel" style={{ position: 'absolute', bottom: '20px', left: '20px', padding: '6px 12px', fontSize: '12px', color: '#fff' }}>
-          The Reef House, Cumbuco
+          className="glass-panel"
+          style={{ 
+            position: 'absolute', top: '20px', left: '20px', padding: '10px', 
+            borderRadius: '50%', cursor: 'pointer', display: 'flex', alignItems: 'center', justifyContent: 'center',
+            zIndex: 10
+          }}
+        >
+          <ChevronLeft color="var(--text-primary)" size={24} />
         </div>
       </div>
 
-      <div style={{ padding: '20px' }}>
-        <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start', marginBottom: '16px' }}>
-          <div>
-            <h1 style={{ fontSize: '28px', fontWeight: 'bold', marginBottom: '8px' }}>The Reef House</h1>
-            <div style={{ color: 'var(--text-secondary)', fontSize: '14px', display: 'flex', alignItems: 'center', gap: '8px' }}>
-              Cumbuco, Ceara <Star size={14} color="gold" /> 4.9 (314 reviews)
-            </div>
-            <div style={{ fontSize: '14px', color: 'var(--text-secondary)', marginTop: '4px' }}>Premium Beachfront Villa</div>
-          </div>
-        </div>
-
-        {/* Booking Card */}
-        <div className="glass-card" style={{ padding: '16px', marginBottom: '24px' }}>
-          <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '16px' }}>
-            <div style={{ color: 'var(--text-secondary)', fontSize: '14px' }}>Dec 14 - Dec 21</div>
-            <div className="glass-panel" style={{ padding: '4px 12px', display: 'flex', alignItems: 'center', gap: '6px' }}>
-               <Users size={14}/> 4
-            </div>
-          </div>
-          <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
+      <div style={{ padding: '24px', marginTop: '-100px', position: 'relative', zIndex: 10 }}>
+        
+        {/* Title and Badge */}
+        <div style={{ marginBottom: '24px' }}>
+          <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start' }}>
             <div>
-              <span style={{ fontSize: '24px', fontWeight: 'bold' }}>$1,295</span>
-              <span style={{ color: 'var(--text-secondary)', fontSize: '12px' }}> Total</span>
+              <span style={{ background: 'var(--neon-green)', color: '#000', padding: '4px 8px', borderRadius: '4px', fontSize: '0.75rem', fontWeight: 800, textTransform: 'uppercase', marginBottom: '8px', display: 'inline-block' }}>
+                Pro Host Exclusivo
+              </span>
+              <h2 style={{ fontSize: '2rem', fontWeight: 800, marginBottom: '8px', lineHeight: 1.1 }}>The Reef House</h2>
+              <p style={{ color: 'var(--text-secondary)', display: 'flex', alignItems: 'center', gap: '6px', fontSize: '0.875rem' }}>
+                <MapPin size={16} color="var(--neon-cyan)" /> Frente para o mar • Cumbuco, CE
+              </p>
             </div>
-            <button className="btn-primary" style={{ background: 'var(--accent-orange)' }}>Book Now</button>
-          </div>
-        </div>
-
-        {/* Host Section */}
-        <div className="glass-panel" style={{ display: 'flex', alignItems: 'center', gap: '16px', padding: '16px', marginBottom: '24px' }}>
-          <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?q=80&w=150&auto=format&fit=crop" style={{ width: '64px', height: '64px', borderRadius: '50%', objectFit: 'cover' }} alt="Host" />
-          <div style={{ flex: 1 }}>
-            <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
-              <h3 style={{ fontSize: '18px' }}>Sarah</h3>
-              <span className="glass-panel" style={{ color: 'var(--accent-cyan)', fontSize: '10px', padding: '4px 8px', borderColor: 'var(--accent-cyan)' }}>PRO HOST</span>
-            </div>
-            <div style={{ fontSize: '12px', color: 'var(--text-secondary)', marginTop: '4px' }}>
-              Superhost since 2018 | 4.9 <Star size={10} color="gold" />
+            <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'flex-end', gap: '4px' }}>
+              <div style={{ display: 'flex', alignItems: 'center', gap: '4px' }}>
+                <Star size={20} color="#fbbf24" fill="#fbbf24" />
+                <span style={{ fontWeight: 700, fontSize: '1.25rem' }}>4.9</span>
+              </div>
+              <span style={{ fontSize: '0.75rem', color: 'var(--text-secondary)' }}>128 avaliações</span>
             </div>
           </div>
         </div>
 
-        {/* Wind Forecast Widget */}
-        <div className="glass-card" style={{ padding: '16px', marginBottom: '24px' }}>
-          <div style={{ display: 'flex', justifyContent: 'space-between', marginBottom: '16px' }}>
-            <h3 style={{ fontSize: '14px', fontWeight: 'bold' }}>WIND FORECAST (Knots)</h3>
-            <span style={{ fontSize: '12px', color: 'var(--accent-green)' }}>GOOD KITING WEEK</span>
-          </div>
-          <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-end', height: '100px', borderBottom: '1px solid var(--glass-border)', paddingBottom: '8px' }}>
-             {[18, 16, 20, 20, 20, 22].map((k, i) => (
-                <div key={i} style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', width: '12%' }}>
-                  <span style={{ fontSize: '10px', marginBottom: '4px' }}>{k}</span>
-                  <div style={{ 
-                    width: '100%', 
-                    height: `${(k / 25) * 60}px`, 
-                    background: 'linear-gradient(to top, var(--accent-cyan), var(--accent-green))',
-                    borderRadius: '4px'
-                  }}></div>
-                  <span style={{ fontSize: '10px', marginTop: '4px', color: 'var(--text-secondary)' }}>D{14+i}</span>
-                </div>
-             ))}
-          </div>
-        </div>
-
-        {/* Equipment Included / Rental */}
-        <h3 style={{ fontSize: '16px', marginBottom: '16px' }}>KITESURFING EQUIPMENT INCLUDED</h3>
-        <div style={{ display: 'flex', gap: '16px', overflowX: 'auto', paddingBottom: '16px' }}>
-          
-          <div className="glass-card" style={{ minWidth: '180px', padding: '16px' }}>
-             <img src="https://s2.glbimg.com/XpQ5Hwz1v0Y73f7m_V70gO5F2zQ=/0x0:1080x1080/984x0/smart/filters:strip_icc()/i.s3.glbimg.com/v1/AUTH_59edd422c0c84a879bd37670ae4f538a/internal_photos/bs/2021/Y/e/F7NqNRTjKASaEByW6Nxg/3.jpg" alt="Kite" style={{ height: '100px', objectFit: 'contain', margin: '0 auto 16px', filter: 'drop-shadow(0 4px 6px rgba(0,0,0,0.5))' }} />
-             <h4 style={{ fontSize: '14px', marginBottom: '8px' }}>Duotone Rebel 2024 Kite</h4>
-             <div style={{ color: 'var(--text-secondary)', fontSize: '12px', marginBottom: '12px' }}>12m</div>
-             <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
-                <span style={{ fontWeight: 'bold' }}>$220/wk</span>
-                <button className="glass-panel" style={{ padding: '6px 12px', fontSize: '12px' }} onClick={() => navigate('/equipment/1')}>Upgrade</button>
-             </div>
+        {/* Meet the Pro Host Section (The Differential) */}
+        <div className="glass-panel" style={{ padding: '24px', marginBottom: '24px', background: 'linear-gradient(145deg, rgba(57, 255, 20, 0.05) 0%, rgba(10, 15, 36, 0.8) 100%)', border: '1px solid rgba(57, 255, 20, 0.3)' }}>
+          <div style={{ display: 'flex', alignItems: 'center', gap: '16px', marginBottom: '20px' }}>
+            <div style={{ 
+              height: '80px', width: '80px', borderRadius: '50%', 
+              backgroundImage: 'url(/images/carlos.png)', 
+              backgroundSize: 'cover', backgroundPosition: 'center',
+              border: '3px solid var(--neon-green)'
+            }}></div>
+            <div>
+              <h3 style={{ fontSize: '1.25rem', fontWeight: 800 }}>Hospedado por <br/>Carlos Mario "Bebê"</h3>
+              <p style={{ color: 'var(--neon-green)', fontWeight: 600, display: 'flex', alignItems: 'center', gap: '4px', fontSize: '0.875rem', marginTop: '4px' }}>
+                <Award size={16} /> 4x Campeão Mundial
+              </p>
+            </div>
           </div>
           
-          <div className="glass-card" style={{ minWidth: '180px', padding: '16px' }}>
-             <div style={{ height: '100px', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
-                <ShieldCheck size={48} color="var(--accent-cyan)" />
-             </div>
-             <h4 style={{ fontSize: '14px', marginBottom: '8px' }}>North Atmos Carbon Board</h4>
-             <div style={{ color: 'var(--text-secondary)', fontSize: '12px', marginBottom: '12px' }}>136cm</div>
-             <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
-                <span style={{ fontWeight: 'bold' }}>$180/wk</span>
-                <button className="glass-panel" style={{ padding: '6px 12px', fontSize: '12px' }} onClick={() => navigate('/equipment/1')}>Upgrade</button>
-             </div>
-          </div>
+          <p style={{ color: 'var(--text-secondary)', fontSize: '0.875rem', lineHeight: 1.6, marginBottom: '20px' }}>
+            "Bem-vindo à minha casa no Cumbuco! Desenhei este espaço pensando 100% no velejo. Além de ficar no melhor pico, você terá acesso à minha rotina de treinos."
+          </p>
 
+          <div style={{ display: 'flex', flexDirection: 'column', gap: '12px' }}>
+            <h4 style={{ fontSize: '0.875rem', fontWeight: 700, textTransform: 'uppercase', color: 'var(--text-primary)' }}>Experiências Inclusas:</h4>
+            
+            <div style={{ display: 'flex', alignItems: 'flex-start', gap: '12px' }}>
+              <Video size={18} color="var(--neon-cyan)" style={{ marginTop: '2px' }} />
+              <div>
+                <p style={{ fontSize: '0.875rem', fontWeight: 600 }}>Sessão de Vídeo Análise (1h)</p>
+                <p style={{ fontSize: '0.75rem', color: 'var(--text-secondary)' }}>Bebê analisa seus saltos e corrige sua postura na TV da sala após o velejo.</p>
+              </div>
+            </div>
+            
+            <div style={{ display: 'flex', alignItems: 'flex-start', gap: '12px' }}>
+              <Coffee size={18} color="var(--neon-cyan)" style={{ marginTop: '2px' }} />
+              <div>
+                <p style={{ fontSize: '0.875rem', fontWeight: 600 }}>Café da Manhã do Atleta</p>
+                <p style={{ fontSize: '0.75rem', color: 'var(--text-secondary)' }}>O mesmo menu nutritivo que o campeão usa antes de competições.</p>
+              </div>
+            </div>
+
+            <div style={{ display: 'flex', alignItems: 'flex-start', gap: '12px' }}>
+              <Waves size={18} color="var(--neon-cyan)" style={{ marginTop: '2px' }} />
+              <div>
+                <p style={{ fontSize: '0.875rem', fontWeight: 600 }}>Downwind Secreto</p>
+                <p style={{ fontSize: '0.75rem', color: 'var(--text-secondary)' }}>Acesso exclusivo às rotas de treino que só os locais conhecem.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {/* Facilities */}
+        <div style={{ marginBottom: '24px' }}>
+          <h3 style={{ fontSize: '1.25rem', fontWeight: 700, marginBottom: '16px' }}>Estrutura da Casa</h3>
+          <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '12px' }}>
+            <div style={{ display: 'flex', alignItems: 'center', gap: '8px', color: 'var(--text-secondary)', fontSize: '0.875rem' }}>
+              <CheckCircle2 size={16} color="var(--neon-green)" /> Guarderia com Cadeado
+            </div>
+            <div style={{ display: 'flex', alignItems: 'center', gap: '8px', color: 'var(--text-secondary)', fontSize: '0.875rem' }}>
+              <CheckCircle2 size={16} color="var(--neon-green)" /> Compressor de Ar
+            </div>
+            <div style={{ display: 'flex', alignItems: 'center', gap: '8px', color: 'var(--text-secondary)', fontSize: '0.875rem' }}>
+              <CheckCircle2 size={16} color="var(--neon-green)" /> Área de Lavagem (Doce)
+            </div>
+            <div style={{ display: 'flex', alignItems: 'center', gap: '8px', color: 'var(--text-secondary)', fontSize: '0.875rem' }}>
+              <CheckCircle2 size={16} color="var(--neon-green)" /> Jacuzzi de Recuperação
+            </div>
+          </div>
+        </div>
+
+        {/* Equipment Add-on Action */}
+        <div className="glass-panel" style={{ padding: '20px', display: 'flex', justifyContent: 'space-between', alignItems: 'center', border: '1px solid var(--neon-cyan)' }}>
+          <div style={{ display: 'flex', alignItems: 'center', gap: '16px' }}>
+            <div style={{ background: 'rgba(6, 182, 212, 0.1)', padding: '12px', borderRadius: '12px' }}>
+              <Waves color="var(--neon-cyan)" size={24} />
+            </div>
+            <div>
+              <h4 style={{ fontWeight: 700 }}>Aluguel de Quiver</h4>
+              <p style={{ fontSize: '0.75rem', color: 'var(--text-secondary)' }}>Kites do ano do próprio campeão</p>
+            </div>
+          </div>
+          <button 
+            className="btn-neon" 
+            onClick={() => navigate(`/property/${id}/equipment`)}
+            style={{ padding: '8px 16px', fontSize: '0.875rem', borderColor: 'var(--neon-cyan)', color: 'var(--neon-cyan)' }}
+          >
+            Ver Itens
+          </button>
         </div>
 
       </div>
+
+      {/* Booking Footer */}
+      <div className="glass-panel" style={{ 
+        position: 'fixed', bottom: 0, left: 0, right: 0, zIndex: 100,
+        padding: '20px 24px', display: 'flex', justifyContent: 'space-between', alignItems: 'center',
+        borderRadius: '24px 24px 0 0', borderBottom: 'none', background: 'rgba(10, 15, 36, 0.95)'
+      }}>
+        <div>
+          <p style={{ color: 'var(--text-secondary)', fontSize: '0.875rem' }}>Hospedagem + Clínica</p>
+          <h3 style={{ fontSize: '1.5rem', fontWeight: 800 }}>R$ 1.250 <span style={{ fontSize: '0.875rem', fontWeight: 400, color: 'var(--text-secondary)' }}>/noite</span></h3>
+        </div>
+        <button className="btn-neon-primary" style={{ padding: '14px 32px', fontSize: '1rem', fontWeight: 700 }}>
+          Reservar Agora
+        </button>
+      </div>
+
     </div>
   );
-}
+};
+
+export default PropertyDetails;
