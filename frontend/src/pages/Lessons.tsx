@@ -1,7 +1,6 @@
 import React from 'react';
 import { BookOpen, Star, ChevronRight } from 'lucide-react';
 
-const lessons = [
   {
     id: 1,
     name: "Cumbuco Kite School",
@@ -17,6 +16,38 @@ const lessons = [
     rating: 4.8,
     price: "R$ 250/h",
     imageUrl: "/images/school.png"
+  },
+  {
+    id: 3,
+    name: "Taíba Freestyle Academy",
+    type: "Freestyle PRO",
+    rating: 5.0,
+    price: "R$ 300/h",
+    imageUrl: "https://images.unsplash.com/photo-1594964645229-873be74b2075?q=80&w=800&auto=format&fit=crop"
+  },
+  {
+    id: 4,
+    name: "Icaraí Wave Club",
+    type: "Wave Riding",
+    rating: 4.7,
+    price: "R$ 220/h",
+    imageUrl: "https://images.unsplash.com/photo-1544365558-35aa4afcf11f?q=80&w=800&auto=format&fit=crop"
+  },
+  {
+    id: 5,
+    name: "Sal Island Surf & Kite",
+    type: "Iniciante ao Avançado",
+    rating: 4.9,
+    price: "R$ 280/h",
+    imageUrl: "https://images.unsplash.com/photo-1518105779142-d975f22f1b0a?q=80&w=800&auto=format&fit=crop"
+  },
+  {
+    id: 6,
+    name: "Rio Kite Base",
+    type: "Freeride & Big Air",
+    rating: 4.8,
+    price: "R$ 240/h",
+    imageUrl: "https://images.unsplash.com/photo-1504505278486-1ebbc03b6bdc?q=80&w=800&auto=format&fit=crop"
   }
 ];
 
@@ -54,7 +85,7 @@ const Lessons = () => {
               </div>
               <div style={{ marginTop: '16px', display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
                 <span style={{ fontSize: '1.125rem', fontWeight: 700 }}>{lesson.price}</span>
-                <button className="btn-neon-primary" style={{ padding: '8px 16px', fontSize: '0.875rem' }}>
+                <button className="btn-neon-primary" onClick={() => alert('Agendamento de aula iniciado...')} style={{ padding: '8px 16px', fontSize: '0.875rem' }}>
                   Agendar
                 </button>
               </div>

@@ -8,7 +8,7 @@ const hostsData: Record<number, any> = {
     titles: "4x Campeão Mundial Freestyle",
     spot: "Lagoa do Cauípe, CE",
     bio: "Nascido e criado no Cauípe, Carlos Mario revolucionou o kitesurf freestyle. Venha ficar na minha pousada e aprender os segredos dos aéreos insanos nas águas lisas da lagoa.",
-    imageUrl: "https://images.unsplash.com/photo-1595183387802-8a9d1de90d7c?q=80&w=800&auto=format&fit=crop",
+    imageUrl: "/images/carlos.png",
     followers: "120K",
     rating: "4.9",
     properties: [
@@ -25,7 +25,7 @@ const hostsData: Record<number, any> = {
     titles: "3x Campeã Mundial",
     spot: "Ilha do Guajirú, CE",
     bio: "Uma das maiores lendas do kitesurf feminino. Fique na minha casa de praia e viva o lifestyle do kite em um dos melhores picos do mundo com vento perfeito todos os dias.",
-    imageUrl: "https://images.unsplash.com/photo-1516515286576-96fa551e71e4?q=80&w=800&auto=format&fit=crop",
+    imageUrl: "/images/bruna.png",
     followers: "250K",
     rating: "5.0",
     properties: [
@@ -42,7 +42,7 @@ const hostsData: Record<number, any> = {
     titles: "Campeão Mundial Wave",
     spot: "Cabo Verde / Ceará",
     bio: "Pioneiro do strapless kitesurfing, Mitu traz toda a alma do oceano. Venha conhecer a verdadeira essência das ondas e a cultura da nossa família no Kitesurf.",
-    imageUrl: "https://images.unsplash.com/photo-1544365558-35aa4afcf11f?q=80&w=800&auto=format&fit=crop",
+    imageUrl: "https://images.unsplash.com/photo-1544365558-35aa4afcf11f?q=80&w=1920&auto=format&fit=crop",
     followers: "180K",
     rating: "4.8",
     properties: [
@@ -59,7 +59,7 @@ const hostsData: Record<number, any> = {
     titles: "6x Campeã Mundial",
     spot: "Taíba, CE",
     bio: "A maior prodígio do kitesurf moderno. Fique no meu refúgio secreto na Taíba e eleve o seu nível de freestyle para outro patamar em águas perfeitas.",
-    imageUrl: "https://images.unsplash.com/photo-1594964645229-873be74b2075?q=80&w=800&auto=format&fit=crop",
+    imageUrl: "https://images.unsplash.com/photo-1594964645229-873be74b2075?q=80&w=1920&auto=format&fit=crop",
     followers: "210K",
     rating: "5.0",
     properties: [
@@ -76,7 +76,7 @@ const hostsData: Record<number, any> = {
     titles: "Recordista Mundial",
     spot: "Rio de Janeiro, RJ",
     bio: "Do Rio para o mundo. O big air é minha paixão e bater recordes é rotina. Venha saltar mais alto do que nunca e viver a adrenalina extrema.",
-    imageUrl: "https://images.unsplash.com/photo-1504505278486-1ebbc03b6bdc?q=80&w=800&auto=format&fit=crop",
+    imageUrl: "https://images.unsplash.com/photo-1504505278486-1ebbc03b6bdc?q=80&w=1920&auto=format&fit=crop",
     followers: "150K",
     rating: "4.9",
     properties: [
@@ -93,7 +93,7 @@ const hostsData: Record<number, any> = {
     titles: "Campeão Mundial Wave",
     spot: "Sal, Cabo Verde",
     bio: "As ondas grandes são o meu parquinho. Se quiser aprender a surfar com pipa em ondas que metem respeito, a ilha do Sal é o lugar e eu sou o seu guia.",
-    imageUrl: "https://images.unsplash.com/photo-1518105779142-d975f22f1b0a?q=80&w=800&auto=format&fit=crop",
+    imageUrl: "https://images.unsplash.com/photo-1518105779142-d975f22f1b0a?q=80&w=1920&auto=format&fit=crop",
     followers: "110K",
     rating: "4.9",
     properties: [
