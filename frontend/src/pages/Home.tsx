@@ -16,6 +16,34 @@ const proHosts = [
     titles: "3x Campeã Mundial",
     imageUrl: "/images/bruna.png",
     spot: "Preá, CE"
+  },
+  {
+    id: 3,
+    name: "Mitu Monteiro",
+    titles: "Campeão Mundial Wave",
+    imageUrl: "https://images.unsplash.com/photo-1544365558-35aa4afcf11f?q=80&w=800&auto=format&fit=crop",
+    spot: "Cabo Verde"
+  },
+  {
+    id: 4,
+    name: "Mikaili Sol",
+    titles: "6x Campeã Mundial",
+    imageUrl: "https://images.unsplash.com/photo-1594964645229-873be74b2075?q=80&w=800&auto=format&fit=crop",
+    spot: "Taíba, CE"
+  },
+  {
+    id: 5,
+    name: "Reno Romeu",
+    titles: "Recordista Mundial",
+    imageUrl: "https://images.unsplash.com/photo-1504505278486-1ebbc03b6bdc?q=80&w=800&auto=format&fit=crop",
+    spot: "Rio de Janeiro, RJ"
+  },
+  {
+    id: 6,
+    name: "Matchu Lopes",
+    titles: "Campeão Mundial Wave",
+    imageUrl: "https://images.unsplash.com/photo-1518105779142-d975f22f1b0a?q=80&w=800&auto=format&fit=crop",
+    spot: "Sal, Cabo Verde"
   }
 ];
 
@@ -39,6 +67,46 @@ const properties = [
     price: "R$ 600",
     wind: "25-35",
     imageUrl: "/images/villa2.png"
+  },
+  {
+    id: 3,
+    name: "Wave Master Lodge",
+    host: "Mitu Monteiro",
+    location: "Icaraízinho, CE",
+    rating: 4.7,
+    price: "R$ 550",
+    wind: "20-25",
+    imageUrl: "https://images.unsplash.com/photo-1582268611958-ebfd161ef9cf?q=80&w=800&auto=format&fit=crop"
+  },
+  {
+    id: 4,
+    name: "Kite Mansion Taíba",
+    host: "Mikaili Sol",
+    location: "Taíba, CE",
+    rating: 5.0,
+    price: "R$ 900",
+    wind: "25-30",
+    imageUrl: "https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?q=80&w=800&auto=format&fit=crop"
+  },
+  {
+    id: 5,
+    name: "Rio Kite Retreat",
+    host: "Reno Romeu",
+    location: "Araruama, RJ",
+    rating: 4.9,
+    price: "R$ 500",
+    wind: "18-25",
+    imageUrl: "https://images.unsplash.com/photo-1499793983690-e29da59ef1c2?q=80&w=800&auto=format&fit=crop"
+  },
+  {
+    id: 6,
+    name: "Ponta Preta Lodge",
+    host: "Matchu Lopes",
+    location: "Ilha do Sal, CV",
+    rating: 4.9,
+    price: "R$ 750",
+    wind: "22-30",
+    imageUrl: "https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?q=80&w=800&auto=format&fit=crop"
   }
 ];
 
@@ -48,7 +116,7 @@ const Home = () => {
   return (
     <div className="home-container">
       {/* High-Impact Hero Section (Desktop Landing Page) */}
-      <section className="hero-section">
+      <section className="hero-section desktop-only">
         <div className="hero-overlay"></div>
         <div className="hero-content">
           <div className="hero-badge">
@@ -67,7 +135,7 @@ const Home = () => {
             <button className="btn-neon-primary hero-btn" onClick={() => document.getElementById('destaques')?.scrollIntoView({ behavior: 'smooth' })}>
               Explorar Experiências
             </button>
-            <button className="btn-neon hero-btn">
+            <button className="btn-neon hero-btn" onClick={() => alert('Carregando filme promocional...')}>
               <Play size={20} /> Ver o Filme
             </button>
           </div>
@@ -89,7 +157,7 @@ const Home = () => {
                 <input type="text" placeholder="20-30 kts" />
               </div>
             </div>
-            <button className="btn-neon-primary search-btn">Buscar</button>
+            <button className="btn-neon-primary search-btn" onClick={() => alert('Buscando propriedades...')}>Buscar</button>
           </div>
         </div>
       </section>
@@ -143,7 +211,7 @@ const Home = () => {
         <div className="section-container" style={{ marginTop: '48px' }}>
           <div className="section-header">
             <h3 className="section-title">Casas de Campeões</h3>
-            <span className="see-all">
+            <span className="see-all" onClick={() => alert('Carregando todas as casas...')} style={{ cursor: 'pointer' }}>
               Ver todas <ChevronRight size={16} />
             </span>
           </div>

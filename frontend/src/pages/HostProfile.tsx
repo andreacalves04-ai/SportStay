@@ -1,6 +1,6 @@
 import React from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
-import { ArrowLeft, MapPin, Award, Star, Instagram, Youtube, Anchor, ShieldCheck } from 'lucide-react';
+import { ArrowLeft, MapPin, Award, Star, Camera, PlayCircle, Anchor, ShieldCheck } from 'lucide-react';
 
 const hostsData: Record<number, any> = {
   1: {
@@ -12,10 +12,12 @@ const hostsData: Record<number, any> = {
     followers: "120K",
     rating: "4.9",
     properties: [
-      { id: 1, name: "Bebê Kite House", type: "Pousada Inteira", price: "R$ 450/noite", image: "https://images.unsplash.com/photo-1499793983690-e29da59ef1c2?q=80&w=800&auto=format&fit=crop" }
+      { id: 1, name: "Bebê Kite House", type: "Pousada Inteira", price: "R$ 450/noite", image: "https://images.unsplash.com/photo-1499793983690-e29da59ef1c2?q=80&w=800&auto=format&fit=crop" },
+      { id: 11, name: "Cauípe Sunset House", type: "Quarto Privativo", price: "R$ 200/noite", image: "https://images.unsplash.com/photo-1510414842594-a61c69b5ae57?q=80&w=800&auto=format&fit=crop" }
     ],
     lessons: [
-      { id: 1, name: "Freestyle Masterclass", level: "Avançado", price: "R$ 300/hora" }
+      { id: 1, name: "Freestyle Masterclass", level: "Avançado", price: "R$ 300/hora" },
+      { id: 11, name: "Iniciantes Kitesurf", level: "Iniciante", price: "R$ 200/hora" }
     ]
   },
   2: {
@@ -27,10 +29,80 @@ const hostsData: Record<number, any> = {
     followers: "250K",
     rating: "5.0",
     properties: [
-      { id: 2, name: "Bruna's Ocean Villa", type: "Vila Luxo", price: "R$ 800/noite", image: "https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?q=80&w=800&auto=format&fit=crop" }
+      { id: 2, name: "Bruna's Ocean Villa", type: "Vila Luxo", price: "R$ 800/noite", image: "https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?q=80&w=800&auto=format&fit=crop" },
+      { id: 22, name: "Guajirú Guest House", type: "Pousada Inteira", price: "R$ 450/noite", image: "https://images.unsplash.com/photo-1512917774080-9991f1c4c750?q=80&w=800&auto=format&fit=crop" }
     ],
     lessons: [
-      { id: 2, name: "Kite Clinic para Mulheres", level: "Todos os níveis", price: "R$ 250/hora" }
+      { id: 2, name: "Kite Clinic para Mulheres", level: "Todos os níveis", price: "R$ 250/hora" },
+      { id: 22, name: "Mentoria de Alta Performance", level: "Pro", price: "R$ 400/hora" }
+    ]
+  },
+  3: {
+    name: "Mitu Monteiro",
+    titles: "Campeão Mundial Wave",
+    spot: "Cabo Verde / Ceará",
+    bio: "Pioneiro do strapless kitesurfing, Mitu traz toda a alma do oceano. Venha conhecer a verdadeira essência das ondas e a cultura da nossa família no Kitesurf.",
+    imageUrl: "https://images.unsplash.com/photo-1544365558-35aa4afcf11f?q=80&w=800&auto=format&fit=crop",
+    followers: "180K",
+    rating: "4.8",
+    properties: [
+      { id: 3, name: "Wave Master Lodge", type: "Pousada Inteira", price: "R$ 550/noite", image: "https://images.unsplash.com/photo-1582268611958-ebfd161ef9cf?q=80&w=800&auto=format&fit=crop" },
+      { id: 33, name: "Sal Island Roots", type: "Quarto Rústico", price: "R$ 250/noite", image: "https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?q=80&w=800&auto=format&fit=crop" }
+    ],
+    lessons: [
+      { id: 3, name: "Strapless Clinic", level: "Avançado", price: "R$ 350/hora" },
+      { id: 33, name: "Ondas para Iniciantes", level: "Intermediário", price: "R$ 250/hora" }
+    ]
+  },
+  4: {
+    name: "Mikaili Sol",
+    titles: "6x Campeã Mundial",
+    spot: "Taíba, CE",
+    bio: "A maior prodígio do kitesurf moderno. Fique no meu refúgio secreto na Taíba e eleve o seu nível de freestyle para outro patamar em águas perfeitas.",
+    imageUrl: "https://images.unsplash.com/photo-1594964645229-873be74b2075?q=80&w=800&auto=format&fit=crop",
+    followers: "210K",
+    rating: "5.0",
+    properties: [
+      { id: 4, name: "Kite Mansion Taíba", type: "Vila Luxo", price: "R$ 900/noite", image: "https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?q=80&w=800&auto=format&fit=crop" },
+      { id: 44, name: "Taíba Secret Hideaway", type: "Bangalô Privativo", price: "R$ 600/noite", image: "https://images.unsplash.com/photo-1587061949409-02df41d5e562?q=80&w=800&auto=format&fit=crop" }
+    ],
+    lessons: [
+      { id: 4, name: "Freestyle Pro Coaching", level: "Pro", price: "R$ 400/hora" },
+      { id: 44, name: "Camp de Férias Kitesurf", level: "Iniciante", price: "R$ 200/hora" }
+    ]
+  },
+  5: {
+    name: "Reno Romeu",
+    titles: "Recordista Mundial",
+    spot: "Rio de Janeiro, RJ",
+    bio: "Do Rio para o mundo. O big air é minha paixão e bater recordes é rotina. Venha saltar mais alto do que nunca e viver a adrenalina extrema.",
+    imageUrl: "https://images.unsplash.com/photo-1504505278486-1ebbc03b6bdc?q=80&w=800&auto=format&fit=crop",
+    followers: "150K",
+    rating: "4.9",
+    properties: [
+      { id: 5, name: "Rio Kite Retreat", type: "Cobertura Frente Mar", price: "R$ 500/noite", image: "https://images.unsplash.com/photo-1499793983690-e29da59ef1c2?q=80&w=800&auto=format&fit=crop" },
+      { id: 55, name: "Araruama Wind Villa", type: "Casa Inteira", price: "R$ 350/noite", image: "https://images.unsplash.com/photo-1510414842594-a61c69b5ae57?q=80&w=800&auto=format&fit=crop" }
+    ],
+    lessons: [
+      { id: 5, name: "Big Air Masterclass", level: "Avançado", price: "R$ 350/hora" },
+      { id: 55, name: "Kite Loops Extremos", level: "Pro", price: "R$ 400/hora" }
+    ]
+  },
+  6: {
+    name: "Matchu Lopes",
+    titles: "Campeão Mundial Wave",
+    spot: "Sal, Cabo Verde",
+    bio: "As ondas grandes são o meu parquinho. Se quiser aprender a surfar com pipa em ondas que metem respeito, a ilha do Sal é o lugar e eu sou o seu guia.",
+    imageUrl: "https://images.unsplash.com/photo-1518105779142-d975f22f1b0a?q=80&w=800&auto=format&fit=crop",
+    followers: "110K",
+    rating: "4.9",
+    properties: [
+      { id: 6, name: "Ponta Preta Lodge", type: "Vila na Praia", price: "R$ 750/noite", image: "https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?q=80&w=800&auto=format&fit=crop" },
+      { id: 66, name: "Santa Maria Guesthouse", type: "Pousada Simples", price: "R$ 180/noite", image: "https://images.unsplash.com/photo-1512917774080-9991f1c4c750?q=80&w=800&auto=format&fit=crop" }
+    ],
+    lessons: [
+      { id: 6, name: "Wave Riding Intenso", level: "Avançado", price: "R$ 300/hora" },
+      { id: 66, name: "Primeiros Passos nas Ondas", level: "Intermediário", price: "R$ 250/hora" }
     ]
   }
 };
@@ -93,11 +165,11 @@ const HostProfile = () => {
           </h3>
           <p style={{ color: 'var(--text-secondary)', lineHeight: 1.8, fontSize: '1.1rem', maxWidth: '800px' }}>{host.bio}</p>
           <div style={{ display: 'flex', gap: '16px', marginTop: '24px' }}>
-            <button className="glass-panel" style={{ display: 'flex', alignItems: 'center', gap: '10px', padding: '12px 24px', color: '#fff', border: '1px solid var(--glass-border)', cursor: 'pointer', borderRadius: '12px', fontWeight: 600 }}>
-              <Instagram size={20} /> Instagram
+            <button className="glass-panel" onClick={() => alert('Redirecionando para o Instagram...')} style={{ display: 'flex', alignItems: 'center', gap: '10px', padding: '12px 24px', color: '#fff', border: '1px solid var(--glass-border)', cursor: 'pointer', borderRadius: '12px', fontWeight: 600 }}>
+              <Camera size={20} /> Instagram
             </button>
-            <button className="glass-panel" style={{ display: 'flex', alignItems: 'center', gap: '10px', padding: '12px 24px', color: '#fff', border: '1px solid var(--glass-border)', cursor: 'pointer', borderRadius: '12px', fontWeight: 600 }}>
-              <Youtube size={20} /> YouTube
+            <button className="glass-panel" onClick={() => alert('Redirecionando para o YouTube...')} style={{ display: 'flex', alignItems: 'center', gap: '10px', padding: '12px 24px', color: '#fff', border: '1px solid var(--glass-border)', cursor: 'pointer', borderRadius: '12px', fontWeight: 600 }}>
+              <PlayCircle size={20} /> YouTube
             </button>
           </div>
         </div>
@@ -114,7 +186,7 @@ const HostProfile = () => {
                   <p style={{ color: 'var(--text-secondary)', fontSize: '1rem', marginBottom: '16px' }}>{prop.type}</p>
                   <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
                     <span style={{ fontWeight: 800, color: 'var(--neon-cyan)', fontSize: '1.25rem' }}>{prop.price}</span>
-                    <button className="btn-neon-primary" style={{ padding: '8px 20px' }}>Ver Mais</button>
+                    <button className="btn-neon-primary" style={{ padding: '8px 20px' }} onClick={(e) => { e.stopPropagation(); navigate(`/property/${prop.id}`); }}>Ver Mais</button>
                   </div>
                 </div>
               </div>
@@ -134,7 +206,7 @@ const HostProfile = () => {
                 </div>
                 <div style={{ textAlign: 'right' }}>
                   <p style={{ fontWeight: 800, fontSize: '1.25rem', marginBottom: '12px' }}>{lesson.price}</p>
-                  <button className="btn-neon" style={{ padding: '8px 24px' }}>Agendar</button>
+                  <button className="btn-neon" style={{ padding: '8px 24px' }} onClick={() => alert('Iniciando fluxo de agendamento...')}>Agendar</button>
                 </div>
               </div>
             ))}
