@@ -1,6 +1,6 @@
 import React from 'react';
 import { BookOpen, Star, ChevronRight } from 'lucide-react';
-
+const lessons = [
   {
     id: 1,
     name: "Cumbuco Kite School",
