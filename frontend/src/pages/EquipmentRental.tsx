@@ -7,25 +7,49 @@ const equipmentList = [
     id: 'k1',
     category: 'Kite',
     brand: 'Duotone',
-    model: 'Kite Completo 2024 (12m)',
-    price: 250,
-    imageUrl: '/images/gear.png'
+    model: 'Evo D/LAB 2024 (12m)',
+    price: 300,
+    imageUrl: 'https://images.unsplash.com/photo-1537554900735-3ce33a1e28ef?q=80&w=800&auto=format&fit=crop'
   },
   {
     id: 'k2',
     category: 'Kite',
     brand: 'North',
-    model: 'Prancha Twintip Carbon',
-    price: 150,
-    imageUrl: '/images/gear.png'
+    model: 'Orbit 2024 (9m)',
+    price: 250,
+    imageUrl: 'https://images.unsplash.com/photo-1529175200257-2e11d619934c?q=80&w=800&auto=format&fit=crop'
   },
   {
     id: 'b1',
     category: 'Board',
+    brand: 'Core',
+    model: 'Choice 5 Twintip (137cm)',
+    price: 150,
+    imageUrl: 'https://images.unsplash.com/photo-1516084930364-84c1ccaf7957?q=80&w=800&auto=format&fit=crop'
+  },
+  {
+    id: 'b2',
+    category: 'Board',
     brand: 'Duotone',
-    model: 'Prancha Direcional Surf',
+    model: 'Wam Direcional (5\'9")',
     price: 180,
-    imageUrl: '/images/gear.png'
+    imageUrl: 'https://images.unsplash.com/photo-1502680390469-be75c86b636f?q=80&w=800&auto=format&fit=crop'
+  },
+  {
+    id: 'h1',
+    category: 'Harness',
+    brand: 'Mystic',
+    model: 'Majestic X Hardshell (M)',
+    price: 90,
+    imageUrl: 'https://images.unsplash.com/photo-1526365926522-86dff77636de?q=80&w=800&auto=format&fit=crop'
+  },
+  {
+    id: 'h2',
+    category: 'Harness',
+    brand: 'Ride Engine',
+    model: 'Saber V3 (L)',
+    price: 110,
+    imageUrl: 'https://images.unsplash.com/photo-1563720718507-1607f2a1586a?q=80&w=800&auto=format&fit=crop'
   }
 ];
 

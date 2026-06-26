@@ -5,19 +5,51 @@ import { useNavigate } from 'react-router-dom';
 const rentals = [
   {
     id: 1,
-    name: "Duotone Kite Set Completo 2024",
-    type: "Freeride",
+    name: "Duotone Evo D/LAB 2024",
+    type: "Kite Freeride/Big Air",
     rating: 5.0,
-    price: "R$ 350/dia",
-    imageUrl: "/images/gear.png"
+    price: "R$ 450/dia",
+    imageUrl: "https://images.unsplash.com/photo-1522008342704-6b265b543c46?q=80&w=800&auto=format&fit=crop"
   },
   {
     id: 2,
-    name: "Prancha Twintip Core Choice",
-    type: "Freestyle",
+    name: "Prancha Twintip Core Choice 5",
+    type: "Board Freestyle",
+    rating: 4.9,
+    price: "R$ 180/dia",
+    imageUrl: "https://images.unsplash.com/photo-1606822154483-eb71ee1b2be4?q=80&w=800&auto=format&fit=crop"
+  },
+  {
+    id: 3,
+    name: "North Orbit 2024 (9m)",
+    type: "Kite Big Air",
     rating: 4.8,
-    price: "R$ 150/dia",
-    imageUrl: "/images/gear.png"
+    price: "R$ 400/dia",
+    imageUrl: "https://images.unsplash.com/photo-1414490929659-9a12b7e31907?q=80&w=800&auto=format&fit=crop"
+  },
+  {
+    id: 4,
+    name: "Ozone Edge V11 (10m)",
+    type: "Kite Racing/Freeride",
+    rating: 4.7,
+    price: "R$ 380/dia",
+    imageUrl: "https://images.unsplash.com/photo-1596706439502-3112bdce11ef?q=80&w=800&auto=format&fit=crop"
+  },
+  {
+    id: 5,
+    name: "Prancha Direcional Duotone Wam",
+    type: "Board Surf/Wave",
+    rating: 4.9,
+    price: "R$ 220/dia",
+    imageUrl: "https://images.unsplash.com/photo-1582297151046-e789a74fc2bc?q=80&w=800&auto=format&fit=crop"
+  },
+  {
+    id: 6,
+    name: "Trapézio Mystic Majestic X",
+    type: "Harness Hardshell",
+    rating: 5.0,
+    price: "R$ 100/dia",
+    imageUrl: "https://images.unsplash.com/photo-1592395679904-1d374431e2ec?q=80&w=800&auto=format&fit=crop"
   }
 ];
 
