@@ -46,7 +46,7 @@ const Rentals = () => {
             <div style={{ padding: '16px', flex: 1, display: 'flex', flexDirection: 'column', justifyContent: 'space-between' }}>
               <div>
                 <h4 style={{ fontSize: '1rem', fontWeight: 600 }}>{rental.name}</h4>
-                <p style={{ color: 'var(--text-secondary)', fontSize: '0.875rem' }}>{rental.location}</p>
+                <p style={{ color: 'var(--text-secondary)', fontSize: '0.875rem' }}>{rental.type}</p>
               </div>
               
               <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-end', marginTop: '16px' }}>
