@@ -546,4 +546,372 @@ body {
     gap: 32px;
     justify-content: flex-start;
   }
+
+  /* ========================================== */
+  /* NEW DESKTOP LANDING PAGE STYLES            */
+  /* ========================================== */
+  .desktop-view {
+    display: flex !important;
+    flex-direction: column;
+    gap: 80px;
+    padding-bottom: 80px;
+  }
+
+  /* Desktop Hero */
+  .desktop-hero {
+    position: relative;
+    height: 95vh;
+    border-radius: 0 0 48px 48px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 0 5%;
+    margin-top: -80px; /* pull up behind nav */
+    padding-top: 80px;
+  }
+
+  .desktop-hero-bg {
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background-image: url('/images/kitesurf_hero.png');
+    background-size: cover;
+    background-position: center 30%;
+    z-index: 0;
+  }
+
+  .desktop-hero-overlay {
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background: linear-gradient(90deg, rgba(2,6,23,0.95) 0%, rgba(2,6,23,0.6) 40%, rgba(2,6,23,0) 100%);
+    z-index: 1;
+  }
+
+  .desktop-hero-content {
+    position: relative;
+    z-index: 2;
+    max-width: 650px;
+  }
+
+  .desktop-hero-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+    background: rgba(16, 185, 129, 0.1);
+    border: 1px solid var(--neon-green);
+    padding: 8px 20px;
+    border-radius: 100px;
+    color: var(--neon-green);
+    font-size: 0.875rem;
+    font-weight: 700;
+    margin-bottom: 32px;
+    letter-spacing: 1px;
+  }
+
+  .desktop-hero-title {
+    font-size: 5rem;
+    line-height: 1.05;
+    margin-bottom: 24px;
+    letter-spacing: -2px;
+    text-shadow: 0 10px 30px rgba(0,0,0,0.5);
+  }
+
+  .desktop-hero-subtitle {
+    font-size: 1.25rem;
+    line-height: 1.6;
+    margin-bottom: 48px;
+    color: #e2e8f0;
+    text-shadow: 0 2px 10px rgba(0,0,0,0.5);
+  }
+
+  .desktop-hero-actions {
+    display: flex;
+    gap: 24px;
+  }
+
+  .desktop-btn-large {
+    padding: 16px 36px;
+    font-size: 1.125rem;
+    border-radius: 12px;
+  }
+
+  /* Desktop Search Bar (Floating) */
+  .desktop-hero-search {
+    position: absolute;
+    bottom: -40px;
+    left: 5%;
+    right: 5%;
+    max-width: 900px;
+    margin: 0 auto;
+    z-index: 10;
+    display: flex;
+    align-items: center;
+    padding: 16px 24px;
+    border-radius: 20px;
+    background: rgba(15, 23, 42, 0.85);
+    backdrop-filter: blur(20px);
+    border: 1px solid rgba(255,255,255,0.15);
+    box-shadow: 0 20px 50px rgba(0,0,0,0.5);
+    gap: 32px;
+  }
+
+  .d-search-item {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .d-search-item label {
+    font-size: 0.75rem;
+    font-weight: 700;
+    color: var(--text-secondary);
+    letter-spacing: 1px;
+  }
+
+  .d-search-input {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+
+  .d-search-input input, .d-search-input select {
+    background: transparent;
+    border: none;
+    color: var(--text-primary);
+    font-size: 1.125rem;
+    font-weight: 600;
+    font-family: inherit;
+    width: 100%;
+    outline: none;
+  }
+
+  .d-search-input select option {
+    background: var(--bg-dark);
+  }
+
+  .d-search-divider {
+    width: 1px;
+    height: 50px;
+    background: var(--glass-border);
+  }
+
+  .d-search-btn {
+    padding: 16px 40px;
+    font-size: 1.125rem;
+    border-radius: 12px;
+  }
+
+  /* Desktop Section Titles */
+  .desktop-section-title-area {
+    text-align: center;
+    margin-bottom: 48px;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .desktop-h2 {
+    font-size: 3rem;
+    font-weight: 800;
+    letter-spacing: -1px;
+    margin-bottom: 16px;
+  }
+
+  .desktop-p {
+    font-size: 1.125rem;
+    color: var(--text-secondary);
+    line-height: 1.6;
+  }
+
+  /* Desktop Pro Hosts Mag Feature */
+  .desktop-pro-hosts {
+    padding: 0 5%;
+    margin-top: 60px;
+  }
+
+  .desktop-hosts-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 24px;
+  }
+
+  .desktop-host-feature {
+    height: 400px;
+    border-radius: 24px;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+
+  .desktop-host-feature:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 40px rgba(6, 182, 212, 0.2);
+  }
+
+  .desktop-host-overlay {
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background: linear-gradient(to top, rgba(2,6,23,0.95) 0%, rgba(2,6,23,0) 60%);
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding: 24px;
+    transition: background 0.3s ease;
+  }
+
+  .desktop-host-feature:hover .desktop-host-overlay {
+    background: linear-gradient(to top, rgba(2,6,23,1) 0%, rgba(2,6,23,0.2) 60%);
+  }
+
+  .desktop-host-spot {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 0.75rem;
+    font-weight: 700;
+    background: rgba(255,255,255,0.1);
+    padding: 4px 10px;
+    border-radius: 10px;
+    margin-bottom: 12px;
+  }
+
+  .desktop-host-info h3 {
+    font-size: 1.5rem;
+    font-weight: 800;
+    margin-bottom: 4px;
+  }
+
+  .desktop-host-info p {
+    font-weight: 600;
+    font-size: 1rem;
+  }
+
+  .desktop-host-action {
+    position: absolute;
+    top: 24px; right: 24px;
+    background: rgba(255,255,255,0.1);
+    backdrop-filter: blur(10px);
+    width: 48px; height: 48px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transform: translateX(-10px);
+    transition: all 0.3s ease;
+  }
+
+  .desktop-host-feature:hover .desktop-host-action {
+    opacity: 1;
+    transform: translateX(0);
+  }
+
+  /* Desktop Properties Masonry */
+  .desktop-properties {
+    padding: 0 5%;
+  }
+
+  .desktop-properties-masonry {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-auto-rows: minmax(350px, auto);
+    gap: 32px;
+  }
+
+  .desktop-prop-card {
+    border-radius: 24px;
+    overflow: hidden;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .desktop-prop-card.large-card {
+    grid-column: span 2;
+  }
+
+  .desktop-prop-card:hover {
+    transform: translateY(-8px);
+  }
+
+  .desktop-prop-image {
+    height: 280px;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+  }
+
+  .desktop-prop-card.large-card .desktop-prop-image {
+    height: 400px;
+  }
+
+  .desktop-prop-badges {
+    position: absolute;
+    top: 20px; right: 20px;
+  }
+
+  .desktop-prop-content {
+    padding: 24px;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    border-radius: 0 0 24px 24px;
+    border-top: none;
+  }
+
+  .dp-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 8px;
+  }
+
+  .dp-header h3 {
+    font-size: 1.5rem;
+    font-weight: 700;
+  }
+
+  .dp-rating {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 1.125rem;
+    font-weight: 700;
+  }
+
+  .dp-location {
+    color: var(--text-secondary);
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 1rem;
+    margin-bottom: 24px;
+  }
+
+  .dp-footer {
+    margin-top: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 20px;
+    border-top: 1px solid var(--glass-border);
+  }
+
+  .dp-price {
+    font-size: 1.5rem;
+    font-weight: 800;
+    color: var(--text-primary);
+  }
+
+  .dp-price span {
+    font-size: 1rem;
+    font-weight: 400;
+    color: var(--text-secondary);
+  }
 }
+
