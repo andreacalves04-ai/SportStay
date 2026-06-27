@@ -7,7 +7,7 @@ const lessons = [
     type: "Iniciante ao Avançado",
     rating: 4.9,
     price: "R$ 200/h",
-    imageUrl: "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?q=80&w=800&auto=format&fit=crop"
+    imageUrl: "/images/school.png"
   },
   {
     id: 2,
@@ -15,7 +15,7 @@ const lessons = [
     type: "Foil & Strapless",
     rating: 4.8,
     price: "R$ 250/h",
-    imageUrl: "https://images.unsplash.com/photo-1495562569060-2eec283d3391?q=80&w=800&auto=format&fit=crop"
+    imageUrl: "/images/school.png"
   },
   {
     id: 3,
@@ -23,7 +23,7 @@ const lessons = [
     type: "Freestyle PRO",
     rating: 5.0,
     price: "R$ 300/h",
-    imageUrl: "https://images.unsplash.com/photo-1471922694854-ff1b63b20054?q=80&w=800&auto=format&fit=crop"
+    imageUrl: "/images/school.png"
   },
   {
     id: 4,
@@ -31,7 +31,7 @@ const lessons = [
     type: "Wave Riding",
     rating: 4.7,
     price: "R$ 220/h",
-    imageUrl: "https://images.unsplash.com/photo-1580974582391-a64288f0a92f?q=80&w=800&auto=format&fit=crop"
+    imageUrl: "/images/school.png"
   },
   {
     id: 5,
@@ -39,7 +39,7 @@ const lessons = [
     type: "Iniciante ao Avançado",
     rating: 4.9,
     price: "R$ 280/h",
-    imageUrl: "https://images.unsplash.com/photo-1498144846853-60ca2d43853b?q=80&w=800&auto=format&fit=crop"
+    imageUrl: "/images/school.png"
   },
   {
     id: 6,
@@ -47,7 +47,7 @@ const lessons = [
     type: "Freeride & Big Air",
     rating: 4.8,
     price: "R$ 240/h",
-    imageUrl: "https://images.unsplash.com/photo-1599839619722-39751411ea63?q=80&w=800&auto=format&fit=crop"
+    imageUrl: "/images/school.png"
   }
 ];
 

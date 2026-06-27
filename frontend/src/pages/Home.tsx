@@ -21,28 +21,28 @@ const proHosts = [
     id: 3,
     name: "Mitu Monteiro",
     titles: "Campeão Mundial Wave",
-    imageUrl: "https://images.unsplash.com/photo-1544365558-35aa4afcf11f?q=80&w=800&auto=format&fit=crop",
+    imageUrl: "/images/mitu.png",
     spot: "Cabo Verde"
   },
   {
     id: 4,
     name: "Mikaili Sol",
     titles: "6x Campeã Mundial",
-    imageUrl: "https://images.unsplash.com/photo-1594964645229-873be74b2075?q=80&w=800&auto=format&fit=crop",
+    imageUrl: "/images/mikaili.png",
     spot: "Taíba, CE"
   },
   {
     id: 5,
     name: "Reno Romeu",
     titles: "Recordista Mundial",
-    imageUrl: "https://images.unsplash.com/photo-1504505278486-1ebbc03b6bdc?q=80&w=800&auto=format&fit=crop",
+    imageUrl: "/images/reno.png",
     spot: "Rio de Janeiro, RJ"
   },
   {
     id: 6,
     name: "Matchu Lopes",
     titles: "Campeão Mundial Wave",
-    imageUrl: "https://images.unsplash.com/photo-1518105779142-d975f22f1b0a?q=80&w=800&auto=format&fit=crop",
+    imageUrl: "/images/matchu.png",
     spot: "Sal, Cabo Verde"
   }
 ];
@@ -76,7 +76,7 @@ const properties = [
     rating: 4.7,
     price: "R$ 550",
     wind: "20-25",
-    imageUrl: "https://images.unsplash.com/photo-1582268611958-ebfd161ef9cf?q=80&w=800&auto=format&fit=crop"
+    imageUrl: "/images/villa3.png"
   },
   {
     id: 4,
@@ -86,7 +86,7 @@ const properties = [
     rating: 5.0,
     price: "R$ 900",
     wind: "25-30",
-    imageUrl: "https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?q=80&w=800&auto=format&fit=crop"
+    imageUrl: "/images/villa4.png"
   },
   {
     id: 5,
@@ -96,7 +96,7 @@ const properties = [
     rating: 4.9,
     price: "R$ 500",
     wind: "18-25",
-    imageUrl: "https://images.unsplash.com/photo-1499793983690-e29da59ef1c2?q=80&w=800&auto=format&fit=crop"
+    imageUrl: "/images/villa5.png"
   },
   {
     id: 6,
@@ -106,7 +106,7 @@ const properties = [
     rating: 4.9,
     price: "R$ 750",
     wind: "22-30",
-    imageUrl: "https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?q=80&w=800&auto=format&fit=crop"
+    imageUrl: "/images/villa6.png"
   }
 ];
 

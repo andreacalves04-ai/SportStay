@@ -9,7 +9,7 @@ const equipmentList = [
     brand: 'Duotone',
     model: 'Evo D/LAB 2024 (12m)',
     price: 300,
-    imageUrl: 'https://images.unsplash.com/photo-1537554900735-3ce33a1e28ef?q=80&w=800&auto=format&fit=crop'
+    imageUrl: '/images/gear.png'
   },
   {
     id: 'k2',
@@ -17,7 +17,7 @@ const equipmentList = [
     brand: 'North',
     model: 'Orbit 2024 (9m)',
     price: 250,
-    imageUrl: 'https://images.unsplash.com/photo-1529175200257-2e11d619934c?q=80&w=800&auto=format&fit=crop'
+    imageUrl: '/images/gear.png'
   },
   {
     id: 'b1',
@@ -25,7 +25,7 @@ const equipmentList = [
     brand: 'Core',
     model: 'Choice 5 Twintip (137cm)',
     price: 150,
-    imageUrl: 'https://images.unsplash.com/photo-1516084930364-84c1ccaf7957?q=80&w=800&auto=format&fit=crop'
+    imageUrl: '/images/gear.png'
   },
   {
     id: 'b2',
@@ -33,7 +33,7 @@ const equipmentList = [
     brand: 'Duotone',
     model: 'Wam Direcional (5\'9")',
     price: 180,
-    imageUrl: 'https://images.unsplash.com/photo-1502680390469-be75c86b636f?q=80&w=800&auto=format&fit=crop'
+    imageUrl: '/images/gear.png'
   },
   {
     id: 'h1',
@@ -41,7 +41,7 @@ const equipmentList = [
     brand: 'Mystic',
     model: 'Majestic X Hardshell (M)',
     price: 90,
-    imageUrl: 'https://images.unsplash.com/photo-1526365926522-86dff77636de?q=80&w=800&auto=format&fit=crop'
+    imageUrl: '/images/gear.png'
   },
   {
     id: 'h2',
@@ -49,7 +49,7 @@ const equipmentList = [
     brand: 'Ride Engine',
     model: 'Saber V3 (L)',
     price: 110,
-    imageUrl: 'https://images.unsplash.com/photo-1563720718507-1607f2a1586a?q=80&w=800&auto=format&fit=crop'
+    imageUrl: '/images/gear.png'
   }
 ];
 

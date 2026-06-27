@@ -9,7 +9,7 @@ const rentals = [
     type: "Kite Freeride/Big Air",
     rating: 5.0,
     price: "R$ 450/dia",
-    imageUrl: "https://images.unsplash.com/photo-1522008342704-6b265b543c46?q=80&w=800&auto=format&fit=crop"
+    imageUrl: "/images/gear.png"
   },
   {
     id: 2,
@@ -17,7 +17,7 @@ const rentals = [
     type: "Board Freestyle",
     rating: 4.9,
     price: "R$ 180/dia",
-    imageUrl: "https://images.unsplash.com/photo-1606822154483-eb71ee1b2be4?q=80&w=800&auto=format&fit=crop"
+    imageUrl: "/images/gear.png"
   },
   {
     id: 3,
@@ -25,7 +25,7 @@ const rentals = [
     type: "Kite Big Air",
     rating: 4.8,
     price: "R$ 400/dia",
-    imageUrl: "https://images.unsplash.com/photo-1414490929659-9a12b7e31907?q=80&w=800&auto=format&fit=crop"
+    imageUrl: "/images/gear.png"
   },
   {
     id: 4,
@@ -33,7 +33,7 @@ const rentals = [
     type: "Kite Racing/Freeride",
     rating: 4.7,
     price: "R$ 380/dia",
-    imageUrl: "https://images.unsplash.com/photo-1596706439502-3112bdce11ef?q=80&w=800&auto=format&fit=crop"
+    imageUrl: "/images/gear.png"
   },
   {
     id: 5,
@@ -41,7 +41,7 @@ const rentals = [
     type: "Board Surf/Wave",
     rating: 4.9,
     price: "R$ 220/dia",
-    imageUrl: "https://images.unsplash.com/photo-1582297151046-e789a74fc2bc?q=80&w=800&auto=format&fit=crop"
+    imageUrl: "/images/gear.png"
   },
   {
     id: 6,
@@ -49,7 +49,7 @@ const rentals = [
     type: "Harness Hardshell",
     rating: 5.0,
     price: "R$ 100/dia",
-    imageUrl: "https://images.unsplash.com/photo-1592395679904-1d374431e2ec?q=80&w=800&auto=format&fit=crop"
+    imageUrl: "/images/gear.png"
   }
 ];
 

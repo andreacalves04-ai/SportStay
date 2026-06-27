@@ -12,8 +12,8 @@ const hostsData: Record<number, any> = {
     followers: "120K",
     rating: "4.9",
     properties: [
-      { id: 1, name: "Bebê Kite House", type: "Pousada Inteira", price: "R$ 450/noite", image: "https://images.unsplash.com/photo-1499793983690-e29da59ef1c2?q=80&w=800&auto=format&fit=crop" },
-      { id: 11, name: "Cauípe Sunset House", type: "Quarto Privativo", price: "R$ 200/noite", image: "https://images.unsplash.com/photo-1510414842594-a61c69b5ae57?q=80&w=800&auto=format&fit=crop" }
+      { id: 1, name: "Bebê Kite House", type: "Pousada Inteira", price: "R$ 450/noite", image: "/images/villa1.png" },
+      { id: 11, name: "Cauípe Sunset House", type: "Quarto Privativo", price: "R$ 200/noite", image: "/images/villa2.png" }
     ],
     lessons: [
       { id: 1, name: "Freestyle Masterclass", level: "Avançado", price: "R$ 300/hora" },
@@ -29,8 +29,8 @@ const hostsData: Record<number, any> = {
     followers: "250K",
     rating: "5.0",
     properties: [
-      { id: 2, name: "Bruna's Ocean Villa", type: "Vila Luxo", price: "R$ 800/noite", image: "https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?q=80&w=800&auto=format&fit=crop" },
-      { id: 22, name: "Guajirú Guest House", type: "Pousada Inteira", price: "R$ 450/noite", image: "https://images.unsplash.com/photo-1512917774080-9991f1c4c750?q=80&w=800&auto=format&fit=crop" }
+      { id: 2, name: "Bruna's Ocean Villa", type: "Vila Luxo", price: "R$ 800/noite", image: "/images/villa3.png" },
+      { id: 22, name: "Guajirú Guest House", type: "Pousada Inteira", price: "R$ 450/noite", image: "/images/villa4.png" }
     ],
     lessons: [
       { id: 2, name: "Kite Clinic para Mulheres", level: "Todos os níveis", price: "R$ 250/hora" },
@@ -42,12 +42,12 @@ const hostsData: Record<number, any> = {
     titles: "Campeão Mundial Wave",
     spot: "Cabo Verde / Ceará",
     bio: "Pioneiro do strapless kitesurfing, Mitu traz toda a alma do oceano. Venha conhecer a verdadeira essência das ondas e a cultura da nossa família no Kitesurf.",
-    imageUrl: "https://images.unsplash.com/photo-1544365558-35aa4afcf11f?q=80&w=1920&auto=format&fit=crop",
+    imageUrl: "/images/mitu.png",
     followers: "180K",
     rating: "4.8",
     properties: [
-      { id: 3, name: "Wave Master Lodge", type: "Pousada Inteira", price: "R$ 550/noite", image: "https://images.unsplash.com/photo-1582268611958-ebfd161ef9cf?q=80&w=800&auto=format&fit=crop" },
-      { id: 33, name: "Sal Island Roots", type: "Quarto Rústico", price: "R$ 250/noite", image: "https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?q=80&w=800&auto=format&fit=crop" }
+      { id: 3, name: "Wave Master Lodge", type: "Pousada Inteira", price: "R$ 550/noite", image: "/images/villa5.png" },
+      { id: 33, name: "Sal Island Roots", type: "Quarto Rústico", price: "R$ 250/noite", image: "/images/villa6.png" }
     ],
     lessons: [
       { id: 3, name: "Strapless Clinic", level: "Avançado", price: "R$ 350/hora" },
@@ -59,12 +59,12 @@ const hostsData: Record<number, any> = {
     titles: "6x Campeã Mundial",
     spot: "Taíba, CE",
     bio: "A maior prodígio do kitesurf moderno. Fique no meu refúgio secreto na Taíba e eleve o seu nível de freestyle para outro patamar em águas perfeitas.",
-    imageUrl: "https://images.unsplash.com/photo-1594964645229-873be74b2075?q=80&w=1920&auto=format&fit=crop",
+    imageUrl: "/images/mikaili.png",
     followers: "210K",
     rating: "5.0",
     properties: [
-      { id: 4, name: "Kite Mansion Taíba", type: "Vila Luxo", price: "R$ 900/noite", image: "https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?q=80&w=800&auto=format&fit=crop" },
-      { id: 44, name: "Taíba Secret Hideaway", type: "Bangalô Privativo", price: "R$ 600/noite", image: "https://images.unsplash.com/photo-1587061949409-02df41d5e562?q=80&w=800&auto=format&fit=crop" }
+      { id: 4, name: "Kite Mansion Taíba", type: "Vila Luxo", price: "R$ 900/noite", image: "/images/villa1.png" },
+      { id: 44, name: "Taíba Secret Hideaway", type: "Bangalô Privativo", price: "R$ 600/noite", image: "/images/villa2.png" }
     ],
     lessons: [
       { id: 4, name: "Freestyle Pro Coaching", level: "Pro", price: "R$ 400/hora" },
@@ -76,12 +76,12 @@ const hostsData: Record<number, any> = {
     titles: "Recordista Mundial",
     spot: "Rio de Janeiro, RJ",
     bio: "Do Rio para o mundo. O big air é minha paixão e bater recordes é rotina. Venha saltar mais alto do que nunca e viver a adrenalina extrema.",
-    imageUrl: "https://images.unsplash.com/photo-1504505278486-1ebbc03b6bdc?q=80&w=1920&auto=format&fit=crop",
+    imageUrl: "/images/reno.png",
     followers: "150K",
     rating: "4.9",
     properties: [
-      { id: 5, name: "Rio Kite Retreat", type: "Cobertura Frente Mar", price: "R$ 500/noite", image: "https://images.unsplash.com/photo-1499793983690-e29da59ef1c2?q=80&w=800&auto=format&fit=crop" },
-      { id: 55, name: "Araruama Wind Villa", type: "Casa Inteira", price: "R$ 350/noite", image: "https://images.unsplash.com/photo-1510414842594-a61c69b5ae57?q=80&w=800&auto=format&fit=crop" }
+      { id: 5, name: "Rio Kite Retreat", type: "Cobertura Frente Mar", price: "R$ 500/noite", image: "/images/villa3.png" },
+      { id: 55, name: "Araruama Wind Villa", type: "Casa Inteira", price: "R$ 350/noite", image: "/images/villa4.png" }
     ],
     lessons: [
       { id: 5, name: "Big Air Masterclass", level: "Avançado", price: "R$ 350/hora" },
@@ -93,12 +93,12 @@ const hostsData: Record<number, any> = {
     titles: "Campeão Mundial Wave",
     spot: "Sal, Cabo Verde",
     bio: "As ondas grandes são o meu parquinho. Se quiser aprender a surfar com pipa em ondas que metem respeito, a ilha do Sal é o lugar e eu sou o seu guia.",
-    imageUrl: "https://images.unsplash.com/photo-1518105779142-d975f22f1b0a?q=80&w=1920&auto=format&fit=crop",
+    imageUrl: "/images/matchu.png",
     followers: "110K",
     rating: "4.9",
     properties: [
-      { id: 6, name: "Ponta Preta Lodge", type: "Vila na Praia", price: "R$ 750/noite", image: "https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?q=80&w=800&auto=format&fit=crop" },
-      { id: 66, name: "Santa Maria Guesthouse", type: "Pousada Simples", price: "R$ 180/noite", image: "https://images.unsplash.com/photo-1512917774080-9991f1c4c750?q=80&w=800&auto=format&fit=crop" }
+      { id: 6, name: "Ponta Preta Lodge", type: "Vila na Praia", price: "R$ 750/noite", image: "/images/villa5.png" },
+      { id: 66, name: "Santa Maria Guesthouse", type: "Pousada Simples", price: "R$ 180/noite", image: "/images/villa6.png" }
     ],
     lessons: [
       { id: 6, name: "Wave Riding Intenso", level: "Avançado", price: "R$ 300/hora" },
